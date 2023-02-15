@@ -1,7 +1,7 @@
 # vgm-audio-processor (IN_PROGRESS)
 
 ## Description
-Retro chiptune music is starting to make a resurgence with the popularity of many retro indie games like Hades and Celeste. However, a majority of music produced for these games rarely use actual hardware that made the 8-bit and 16-bit music charming. The purpose of this project is to replicate a sound chip from the NES/SNES and allow MIDI keyboard inputs to create music to bring back that old school charm.
+Retro chiptune music is starting to make a resurgence with the popularity of many retro indie games like Hades and Celeste. However, a majority of music produced for these games rarely use actual hardware that made the 8-bit and 16-bit music charming. The purpose of this project is to replicate a sound chip from the NES/SNES using a programming language. 
 
 
 ### Resources:
@@ -14,3 +14,7 @@ Retro chiptune music is starting to make a resurgence with the popularity of man
 * AVR
 * Python (PyAudio)
 * Rust
+* 
+### Possible Function Implemenations:
+* MIDI Input
+* Input WAV and reproduce into retro audio
