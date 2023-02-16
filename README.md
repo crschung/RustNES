@@ -14,7 +14,9 @@ Retro chiptune music is starting to make a resurgence with the popularity of man
 * AVR
 * Python (PyAudio)
 * Rust
-* 
+
 ### Possible Function Implemenations:
 * MIDI Input
 * Input WAV and reproduce into retro audio
+* Alternate Modes (SNES/NES)
+* Visualizer?
