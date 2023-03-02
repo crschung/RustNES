@@ -9,14 +9,23 @@ Retro chiptune music is starting to make a resurgence with the popularity of man
 >* http://www.vgmpf.com/Wiki/index.php?title=S-SMP
 >* https://www.youtube.com/playlist?list=PLHQ0utQyFw5JD2wWda50J8XuzQ2cFr8RX
 >* https://www.youtube.com/watch?v=8RrQrATnXXY
+>* https://www.egui.rs/
+>* https://bugzmanov.github.io/nes_ebook/
 
-### Possible Languages:
-* AVR
-* Python (PyAudio)
-* Rust
+Programming Language: Rust
 
 ### Possible Function Implemenations:
 * MIDI Input
-* Input WAV and reproduce into retro audio
-* Alternate Modes (SNES/NES)
-* Visualizer?
+* Visualization (waveform)
+* GUI
+* Pass songsusing import 
+Good to have:
+* Filters?
+* Entrie chip (real code)
+
+Crates
+* rodio
+* simple_waves
+* mido
+* egui
+
