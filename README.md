@@ -16,18 +16,21 @@ Retro chiptune music is starting to make a resurgence with the popularity of man
 >* https://github.com/RustAudio/rodio
 >* https://docs.rs/basic_waves/latest/basic_waves/index.html
 
-Programming Language: Rust
+### Programming Language: Rust
 
 ### Possible Function Implemenations:
 * MIDI Input
 * Visualization (waveform)
 * GUI
 * Pass songsusing import 
-Good to have:
+
+### Good to have:
 * Filters?
 * Entrie chip (real code)
+* Export and Save (.wav, .ogg, .mp3)
+* 
 
-Crates
+### Crates
 * rodio
 * simple_waves
 * mido
