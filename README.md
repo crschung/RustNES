@@ -28,7 +28,6 @@ Retro chiptune music is starting to make a resurgence with the popularity of man
 * Filters?
 * Entrie chip (real code)
 * Export and Save (.wav, .ogg, .mp3)
-* 
 
 ### Crates
 * rodio
