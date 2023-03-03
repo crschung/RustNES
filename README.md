@@ -1,7 +1,7 @@
 # vgm-audio-processor (IN_PROGRESS)
 
 ## Description
-Retro chiptune music is starting to make a resurgence with the popularity of many retro indie games like Hades and Celeste. However, a majority of music produced for these games rarely use actual hardware that made the 8-bit and 16-bit music charming. The purpose of this project is to replicate a sound chip from the NES/SNES using a programming language. 
+Retro chiptune music is starting to make a resurgence with the popularity of many retro indie games like Hades and Celeste. However, a majority of music produced for these games rarely use actual hardware that made the 8-bit and 16-bit music charming. The purpose of this project is to replicate a sound chip from the NES using Rust. 
 
 
 ### Resources:
@@ -11,6 +11,10 @@ Retro chiptune music is starting to make a resurgence with the popularity of man
 >* https://www.youtube.com/watch?v=8RrQrATnXXY
 >* https://www.egui.rs/
 >* https://bugzmanov.github.io/nes_ebook/
+>* https://docs.rs/midly/latest/midly/
+>* https://docs.rs/midly/latest/rodio
+>* https://github.com/RustAudio/rodio
+>* https://docs.rs/basic_waves/latest/basic_waves/index.html
 
 Programming Language: Rust
 
@@ -28,4 +32,5 @@ Crates
 * simple_waves
 * mido
 * egui
+
 
