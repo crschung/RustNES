@@ -34,4 +34,9 @@ Retro chiptune music is starting to make a resurgence with the popularity of man
 * mido
 * egui
 
+## How To Run
+```
+cargo build
+vargo run
+```
 
