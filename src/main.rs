@@ -80,11 +80,11 @@ impl eframe::App for RustNES {
             }
 
             if ui.button("Play NES Triangle").clicked(){
-                play_nes_triangle_wave(349.0);
+                play_nes_triangle_wave(440.0);
             }
 
             if ui.button("Play NES Pulse").clicked(){
-                play_nes_pulse_wave(349.0);
+                play_nes_pulse_wave(440.0);
             }
 
             if ui.button("Play NES Noise").clicked(){
