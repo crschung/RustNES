@@ -103,7 +103,7 @@ impl Iterator for NESPulseWave {
     type Item = f32;
 
     ///
-    /// This function imitates the NES Noise
+    /// This function imitates the NES Pulse wave
     /// 
     #[inline]
     fn next(&mut self) -> Option<f32> {
