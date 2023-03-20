@@ -153,11 +153,10 @@ pub struct NESNoise {
 }
 
 impl NESNoise {
-    /// The frequency of the sine.
     #[inline]
     pub fn new() -> NESNoise {
         NESNoise {
-            // The steps of the triangle wave
+            // The steps that the noise can produce
             steps: [-1.0, -0.86666, -0.73333, -0.6, -0.46666, -0.33333, -0.2, -0.06666, 0.06666, 0.2, 0.33333, 0.46666, 0.6, 0.73333, 0.86666, 1.0],
         }
     }
