@@ -3,6 +3,8 @@ use std::{time::Duration};
 use midly::{TrackEvent, MidiMessage, TrackEventKind};
 use rodio::{source::{SineWave, Source}, OutputStream, Sink};
 
+mod waves;
+
 fn main() {
 
     let options = eframe::NativeOptions {
@@ -77,8 +79,16 @@ impl eframe::App for RustNES {
                 });
             }
 
-            if ui.button("Play").clicked(){
-                play_sine_wave(440.0)
+            if ui.button("Play NES Triangle").clicked(){
+                play_nes_triangle_wave(440.0);
+            }
+
+            if ui.button("Play NES Pulse").clicked(){
+                play_nes_pulse_wave(440.0);
+            }
+
+            if ui.button("Play NES Noise").clicked(){
+                play_nes_noise();
             }
         });
     }
@@ -86,10 +96,36 @@ impl eframe::App for RustNES {
 
 
 ///
+/// Simple rodio sink to play an NES triangle wave
+/// 
+fn play_nes_triangle_wave(freq: f32){
+    let source = waves::NESTriangleWave::new(freq).take_duration(Duration::from_secs_f32(1.0));
+
+    let (_stream, stream_handle) = OutputStream::try_default().unwrap();
+    let sink = Sink::try_new(&stream_handle).unwrap();
+
+    sink.append(source);
+    sink.sleep_until_end();
+}
+
+///
+/// Simple rodio sink to play an NES pulse wave
+/// 
+fn play_nes_pulse_wave(freq: f32){
+    let source = waves::NESPulseWave::new(freq, 0.8).take_duration(Duration::from_secs_f32(1.0));
+
+    let (_stream, stream_handle) = OutputStream::try_default().unwrap();
+    let sink = Sink::try_new(&stream_handle).unwrap();
+
+    sink.append(source);
+    sink.sleep_until_end();
+}
+
+///
 /// Simple rodio sink to play a sine wave
 /// 
-fn play_sine_wave(freq: f32){
-    let source = SineWave::new(freq).take_duration(Duration::from_secs_f32(1.0));
+fn play_nes_noise(){
+    let source = waves::NESNoise::new().take_duration(Duration::from_secs_f32(1.0));
 
     let (_stream, stream_handle) = OutputStream::try_default().unwrap();
     let sink = Sink::try_new(&stream_handle).unwrap();
