@@ -29,13 +29,13 @@ fn parse_midi(track: &Vec<TrackEvent>)
 
         match kind {
             TrackEventKind::Midi { channel, message } => match message {
-                MidiMessage::NoteOff { key, vel } => todo!(),
-                MidiMessage::NoteOn { key, vel } => todo!(),
-                MidiMessage::Aftertouch { key, vel } => todo!(),
-                MidiMessage::Controller { controller, value } => todo!(),
-                MidiMessage::ProgramChange { program } => todo!(),
-                MidiMessage::ChannelAftertouch { vel } => todo!(),
-                MidiMessage::PitchBend { bend } => todo!(),
+                MidiMessage::NoteOff { key, vel } => println!("Note Off: channel={}, key={}, vel={}", channel, key, vel),
+                MidiMessage::NoteOn { key, vel } => println!("Note On: channel={}, key={}, vel={}", channel, key, vel),
+                MidiMessage::Aftertouch { key, vel } => println!("Aftertouch: channel={}, key={}, vel={}", channel, key, vel),
+                MidiMessage::Controller { controller, value } => println!("Controller: channel={}, controller={}, value={}", channel, controller, value),
+                MidiMessage::ProgramChange { program } => println!("Program Change: channel={}, program={}", channel, program),
+                MidiMessage::ChannelAftertouch { vel } => println!("Channel Aftertouch: channel={}, vel={}", channel, vel),
+                MidiMessage::PitchBend { bend } => println!("Pitch Bend: channel={}, bend={}", channel, bend),
             }
             _ => {}
 
