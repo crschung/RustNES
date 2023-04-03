@@ -10,11 +10,12 @@ Retro chiptune music is starting to make a resurgence with the popularity of man
 >* Basic audio generator that can produce 8-bit sound based on user's keyboard input.
 
 ### Milestone 2 (expected):
->* The program can accept MIDI file as an input, and convert it to chiptune sound. It should be able to handle multiple channels as well.
-Various MIDI files should be used for testing this function, such as relatively simple classical music file with a single channel, and more complex pop song with multiple channels. <br /><br />
+>* The program can accept MIDI file as input, and convert it to chiptune sound. It should be able to handle multiple channels as well.
+Various MIDI files should be used for testing this function, such as a relatively simple classical music file with a single channel, and more complex pop songs with multiple channels. <br /><br />
 >* Graphical User Interface is implemented with features such as play/pause, volume control, and MIDI import, export function.<br /><br />
->* Animation of waveform is displayed as well when music is played (something like old Windows' winamp visualization)
+>* Animation of waveforms is displayed as well when music is played (something like old Windows' winamp visualization)
 We could test this function by comparing the visualization with other pre-existing services.
+
 ### Milestone 3 (advanced):
 >* An equalizer is added and users can use it to modify the sound, like base boost, treble boost, etc.
 This also can be tested by utilizing other services, such as spotify's equalizer function and comparing the difference 
@@ -51,7 +52,7 @@ Mainly Rust, and possibly Python as well
 * MIDI Input
 * Visualization (waveform)
 * GUI
-* Pass songsusing import 
+* Pass songs using import 
 
 ## Potential Functions:
 ---
