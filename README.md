@@ -4,6 +4,25 @@
 ---
 Retro chiptune music is starting to make a resurgence with the popularity of many retro indie games like Hades and Celeste. One of the reasons why it's gaining its popularity again is because it resonates with a lot of people; it brings back nostalgia and fond memory associated with it. However, a majority of music produced for these games rarely use actual hardware that made the 8-bit and 16-bit music charming. The purpose of this project is to replicate a sound chip from the NES (Nintendo Entertainment System) using Rust, and bring back those memories to the users.
 
+## Milestones
+---
+### Milestone 1 (worst case scenario):
+>* Basic audio generator that can produce 8-bit sound based on user's keyboard input.
+
+### Milestone 2 (expected):
+>* The program can accept MIDI file as an input, and convert it to chiptune sound. It should be able to handle multiple channels as well.
+Various MIDI files should be used for testing this function, such as relatively simple classical music file with a single channel, and more complex pop song with multiple channels. <br /><br />
+>* Graphical User Interface is implemented with features such as play/pause, volume control, and MIDI import, export function.<br /><br />
+>* Animation of waveform is displayed as well when music is played (something like old Windows' winamp visualization)
+We could test this function by comparing the visualization with other pre-existing services.
+### Milestone 3 (advanced):
+>* An equalizer is added and users can use it to modify the sound, like base boost, treble boost, etc.
+This also can be tested by utilizing other services, such as spotify's equalizer function and comparing the difference 
+in quality.
+
+## Contributors
+---
+[Cy Chung](https://github.com/crschung), [Jae Park](https://github.com/jpark052), [Syyreign](https://github.com/Syyreign), [David Kim](https://github.com/Quayvid), [Ethan Slogotski](https://github.com/eman1003), [Francis German](francisgerman70), [Skylar Buck](https://github.com/skylarbuck)
 
 ## Resources
 ---
@@ -27,20 +46,20 @@ Retro chiptune music is starting to make a resurgence with the popularity of man
 ---
 Mainly Rust, and possibly Python as well
 
-## Possible Function Implemenations
+## Expected Functions:
 ---
 * MIDI Input
 * Visualization (waveform)
 * GUI
 * Pass songsusing import 
 
-## Good to have:
+## Potential Functions:
 ---
 * Filters?
 * Entrie chip (real code)
 * Export and Save (.wav, .ogg, .mp3)
 
-## Crates
+## Dependencies
 ---
 * [Rodio](https://github.com/RustAudio/rodio)
 * simple_waves
