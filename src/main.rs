@@ -1,9 +1,18 @@
 use midly::{TrackEvent, MidiMessage, TrackEventKind};
 use rodio::{source::{Source}};
+use std::i16;
+use hound::{SampleFormat, WavSpec, WavWriter};
+use std::time::Duration; // temp
 
 mod rustnes; 
+mod waves; // for testing purposes
 
 fn main() {
+
+    // Test code for export_wav function
+    /* let data = waves::NESTriangleWave::new(220.0).take_duration(Duration::from_secs_f32(1.0));
+    export_wav("test.wav", data); */
+    //
 
     let options = eframe::NativeOptions {
         initial_window_size: Some(egui::vec2(400.0, 300.0)),
@@ -20,6 +29,7 @@ fn main() {
 /// Takes as an input the current MIDI track, and can be used to retrieve individual notes
 /// Note: MIDIs can have multiple tracks
 /// 
+
 fn parse_midi(track: &Vec<TrackEvent>)
 {
     for track_event in track{
@@ -39,6 +49,28 @@ fn parse_midi(track: &Vec<TrackEvent>)
 
         }
     }
+}
+
+///
+/// Function for exporting audio as a 16 bit WAV file
+/// NESTriangleWave data type is temporary
+///
+
+fn export_wav(filename: &str, data: rodio::source::TakeDuration<waves::NESTriangleWave>) { 
+    let header = hound::WavSpec {
+        channels: 1,
+        sample_rate: 48000,
+        bits_per_sample: 16,
+        sample_format: hound::SampleFormat::Int,
+    };
+
+    let mut writer= hound::WavWriter::create(filename, header).unwrap();
+
+    for sample in data {
+        let amplitude = i16::MAX as f32;
+        writer.write_sample((sample * amplitude) as i16).unwrap();
+    }
+
 }
 
 /// Egui base
