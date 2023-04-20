@@ -4,6 +4,12 @@
 ---
 Retro chiptune music is starting to make a resurgence with the popularity of many retro indie games like Hades and Celeste. One of the reasons why it's gaining its popularity again is because it resonates with a lot of people; it brings back nostalgia and fond memory associated with it. However, a majority of music produced for these games rarely use actual hardware that made the 8-bit and 16-bit music charming. The purpose of this project is to replicate a sound chip from the NES (Nintendo Entertainment System) using Rust, and bring back those memories to the users.
 
+## Repositories
+---
+Here are the repositories for the Rust and Python Implementation:
+>* https://github.com/Syyreign/RustNES
+>* https://github.com/jpark052/RustNES
+
 ## Milestones
 ---
 ### Milestone 1 (worst case scenario):
@@ -45,7 +51,7 @@ in quality.
 
 ## Programming Language
 ---
-Mainly Rust, and possibly Python as well
+Rust and Python
 
 ## Expected Functions:
 ---
@@ -54,19 +60,12 @@ Mainly Rust, and possibly Python as well
 * GUI
 * Pass songs using import 
 
-## Potential Functions:
----
-* Filters?
-* Entrie chip (real code)
-* Export and Save (.wav, .ogg, .mp3)
-
 ## Dependencies
 ---
 * [Rodio](https://github.com/RustAudio/rodio)
 * simple_waves
 * [mido](https://mido.readthedocs.io/en/latest/)
 * [egui](https://github.com/emilk/egui)
-
 
 ## How To Run
 ---
